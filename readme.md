@@ -29,6 +29,57 @@ After a successful launch, the service is available at http://localhost:8000/api
 ## DOCUMENTATION
 
 
+OPTIONS /api-v1/books/
+
+    Returns a description of types and supported formats
+
+    responses:
+      200: OK
+      {
+          "name": "Book List",
+          "description": "",
+          "renders": [
+              "application/json",
+              "text/html"
+          ],
+          "parses": [
+              "application/json",
+              "application/x-www-form-urlencoded",
+              "multipart/form-data"
+          ],
+          "actions": {
+              "POST": {
+                  "id": {
+                      "type": "integer",
+                      "required": false,
+                      "read_only": true,
+                      "label": "ID"
+                  },
+                  "author": {
+                      "type": "string",
+                      "required": true,
+                      "read_only": false,
+                      "label": "Author",
+                      "max_length": 100
+                  },
+                  "name": {
+                      "type": "string",
+                      "required": true,
+                      "read_only": false,
+                      "label": "Name",
+                      "max_length": 200
+                  },
+                  "reader": {
+                      "type": "field",
+                      "required": false,
+                      "read_only": false,
+                      "label": "Reader"
+                  }
+              }
+          }
+        }
+
+
 GET /api-v1/books/   [?page={pageNum}&reader={readerID}]
 
     Returns a list of books
@@ -159,6 +210,45 @@ GET /api-v1/books/export.csv
     Returns a book list file
     Columns in file:
         	bid ; author ; name ; rid ; reader
+
+
+OPTIONS /api-v1/readers/
+
+    Returns a description of types and supported formats
+
+    responses:
+      200: OK
+        "application/json"
+        {
+            "name": "Reader List",
+            "description": "",
+            "renders": [
+                "application/json",
+                "text/html"
+            ],
+            "parses": [
+                "application/json",
+                "application/x-www-form-urlencoded",
+                "multipart/form-data"
+            ],
+            "actions": {
+                "POST": {
+                    "id": {
+                        "type": "integer",
+                        "required": false,
+                        "read_only": true,
+                        "label": "ID"
+                    },
+                    "name": {
+                        "type": "string",
+                        "required": true,
+                        "read_only": false,
+                        "label": "Name",
+                        "max_length": 200
+                    }
+                }
+            }
+        }
 
 
 GET /api-v1/readers/   [?page={pageNum}]
