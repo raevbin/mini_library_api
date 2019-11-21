@@ -1,0 +1,170 @@
+== Hello ==
+== Hello ==
+== Hello ==
+== Hello ==
+== get_queryset ==
+{}
+== get_queryset ==
+{}
+== get_queryset ==
+== get_queryset ==
+pk
+== get_queryset ==
+pk
+== get_queryset ==
+<rest_framework.request.Request object at 0x7fa946fdb5e0>
+== get_queryset ==
+<rest_framework.request.Request object at 0x7fa946fdb5e0>
+== get_queryset ==
+<QueryDict: {'qwe': ['e']}>
+== get_queryset ==
+<QueryDict: {'qwe': ['e']}>
+== get_queryset ==
+e
+== get_queryset ==
+e
+== get_queryset ==
+== get_queryset ==
+== get_queryset ==
+{}
+== get_queryset ==
+{}
+== get_queryset ==
+== get_queryset ==
+== get_queryset ==
+== get_queryset ==
+== get_queryset ==
+== get_queryset ==
+== get_queryset ==
+== get_queryset ==
+== get_queryset ==
+== get_queryset ==
+== get_queryset ==
+== get_queryset ==
+HyperlinkedIdentityField(view_name='library:book_detail')
+['__class__', '__deepcopy__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_args', '_creation_counter', '_kwargs', 'allow_null', 'bind', 'choices', 'context', 'default', 'default_empty_html', 'default_error_messages', 'default_validators', 'display_value', 'error_messages', 'fail', 'field_name', 'format', 'get_attribute', 'get_choices', 'get_default', 'get_initial', 'get_object', 'get_queryset', 'get_url', 'get_validators', 'get_value', 'grouped_choices', 'help_text', 'html_cutoff', 'html_cutoff_text', 'initial', 'iter_options', 'label', 'lookup_field', 'lookup_url_kwarg', 'many_init', 'parent', 'queryset', 'read_only', 'required', 'reverse', 'root', 'run_validation', 'run_validators', 'source', 'style', 'to_internal_value', 'to_representation', 'use_pk_only_optimization', 'validate_empty_values', 'validators', 'view_name', 'write_only']
+HyperlinkedIdentityField(view_name='library:book_detail')
+['__class__', '__deepcopy__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_args', '_creation_counter', '_kwargs', 'allow_null', 'bind', 'choices', 'context', 'default', 'default_empty_html', 'default_error_messages', 'default_validators', 'display_value', 'error_messages', 'fail', 'field_name', 'format', 'get_attribute', 'get_choices', 'get_default', 'get_initial', 'get_object', 'get_queryset', 'get_url', 'get_validators', 'get_value', 'grouped_choices', 'help_text', 'html_cutoff', 'html_cutoff_text', 'initial', 'iter_options', 'label', 'lookup_field', 'lookup_url_kwarg', 'many_init', 'parent', 'queryset', 'read_only', 'required', 'reverse', 'root', 'run_validation', 'run_validators', 'source', 'style', 'to_internal_value', 'to_representation', 'use_pk_only_optimization', 'validate_empty_values', 'validators', 'view_name', 'write_only']
+=========== obj ==============
+cvbn
+=========== obj ==============
+dddfgh
+=========== obj ==============
+erty
+=========== obj ==============
+qwer
+=========== obj ==============
+sadf
+=========== obj ==============
+sdfg
+=========== obj ==============
+wert
+=========== obj ==============
+xcvb
+=========== obj ==============
+zxcv
+=========== obj ==============
+Вася
+=========== obj ==============
+13
+=========== obj ==============
+12
+=========== obj ==============
+11
+=========== obj ==============
+5
+=========== obj ==============
+6
+=========== obj ==============
+9
+=========== obj ==============
+8
+=========== obj ==============
+10
+=========== obj ==============
+7
+=========== obj ==============
+1
+=========== obj ==============
+12
+=========== obj ==============
+12
+=========== obj ==============
+12
+=========== obj ==============
+12
+=========== obj ==============
+13
+=========== obj ==============
+11
+=========== obj ==============
+12
+=========== obj ==============
+5
+=========== obj ==============
+6
+=========== obj ==============
+9
+=========== obj ==============
+8
+=========== obj ==============
+10
+=========== obj ==============
+7
+=========== obj ==============
+1
+=========== obj ==============
+14
+def save(self, **kwargs):
+def to_internal_value(self, data):
+def save(self, **kwargs):
+def to_internal_value(self, data):
+/api-v1/readers/11/
+def save(self, **kwargs):
+def to_internal_value(self, data):
+/api-v1/readers/11/
+ResolverMatch(func=library.views.ReaderUpdate, args=(), kwargs={'pk': 11}, url_name=reader-detail, app_names=[], namespaces=[], route=api-v1/readers/<int:pk>/)
+def save(self, **kwargs):
+def to_internal_value(self, data):
+/api-v1/readers/11/
+reader-detail
+def save(self, **kwargs):
+def save(self, **kwargs):
+def save(self, **kwargs):
+def save(self, **kwargs):
+def save(self, **kwargs):
+def save(self, **kwargs):
+def save(self, **kwargs):
+def save(self, **kwargs):
+def save(self, **kwargs):
+def save(self, **kwargs):
+def save(self, **kwargs):
+def save(self, **kwargs):
+def save(self, **kwargs):
+def save(self, **kwargs):
+def save(self, **kwargs):
+def save(self, **kwargs):
+def save(self, **kwargs):
+def save(self, **kwargs):
+def save(self, **kwargs):
+def save(self, **kwargs):
+def delete(self, request, *args, **kwargs):
+def delete(self, request, *args, **kwargs):
+<rest_framework.request.Request object at 0x7f7db0243400>
+()
+{'pk': 3}
+def delete(self, request, *args, **kwargs):
+<rest_framework.request.Request object at 0x7f9b19b67550>
+()
+{'pk': 3}
+def delete(self, request, *args, **kwargs):
+<rest_framework.request.Request object at 0x7fa7a1e13610>
+()
+{'pk': 3}
+def delete(self, request, *args, **kwargs):
+<rest_framework.request.Request object at 0x7f34e8406340>
+()
+{'pk': 3}
+def delete(self, request, *args, **kwargs):
+def delete(self, request, *args, **kwargs):
+[OrderedDict([('id', 7), ('author', 'ertyyuty'), ('name', 'gfjghjgfhjgfj'), ('reader', 3)]), OrderedDict([('id', 9), ('author', 'sdfgdfghdfgh'), ('name', 'dfghfdgh dg df'), ('reader', 3)]), OrderedDict([('id', 15), ('author', 'sadfsdf'), ('name', 'fdghfdgh'), ('reader', 3)])]
