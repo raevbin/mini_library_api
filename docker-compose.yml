@@ -29,5 +29,3 @@ services:
       - ./db:/var/lib/mysql
       - ./mycustom.cnf:/etc/mysql/conf.d/custom.cnf
       - ./init.sql:/data/application/init.sql
-
-# apt install default-mysql-client
