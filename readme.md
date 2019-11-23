@@ -49,6 +49,12 @@ OPTIONS /api-v1/books/
           ],
           "actions": {
               "POST": {
+                  "url": {
+                      "type": "field",
+                      "required": false,
+                      "read_only": true,
+                      "label": "Url"
+                  },
                   "id": {
                       "type": "integer",
                       "required": false,
@@ -74,6 +80,12 @@ OPTIONS /api-v1/books/
                       "required": false,
                       "read_only": false,
                       "label": "Reader"
+                  },
+                  "reader_name": {
+                      "type": "field",
+                      "required": false,
+                      "read_only": true,
+                      "label": "Reader name"
                   }
               }
           }
@@ -99,10 +111,12 @@ GET /api-v1/books/   [?page={pageNum}&reader={readerID}]
 					"previous": <url str>,
 					"results": [
 						{
+              "url":<str>,
 							"id": <int>,
 							"author": <str>,
 							"name": <str>,
-							"reader": <int>
+							"reader": <int>,
+              "reader_name":<str>
 						},
 						...
 					]
@@ -123,12 +137,14 @@ POST /api-v1/books/
 			200: OK
 				"application/json"
 
-				{
-					"id": <int>,
-					"author": <str>,
-					"name": <str>,
-					"reader": <int>
-				}
+        {
+          "url":<str>,
+          "id": <int>,
+          "author": <str>,
+          "name": <str>,
+          "reader": <int>,
+          "reader_name":<str>
+        }
 
 			400: Bad Request
 				"application/json"
@@ -151,15 +167,7 @@ GET /api-v1/books/{bookID}/
 				bookID: <int> Required parametr
 
     responses:
-			200: OK
-				"application/json"
-
-				 {
-					"id": <int>,
-					"author": <str>,
-					"name": <str>,
-					"reader": <int>
-				 }
+			200: by analogy with POST /api-v1/books/
 
 			404: Not Found
 				"application/json"
@@ -233,6 +241,12 @@ OPTIONS /api-v1/readers/
             ],
             "actions": {
                 "POST": {
+                    "url": {
+                        "type": "field",
+                        "required": false,
+                        "read_only": true,
+                        "label": "Url"
+                      },
                     "id": {
                         "type": "integer",
                         "required": false,
@@ -269,6 +283,7 @@ GET /api-v1/readers/   [?page={pageNum}]
 					"previous": <url str>,
 					"results": [
 						{
+              "url": <str>,
 							"id": <int>,
 							"name": <str>
 						},
@@ -290,6 +305,7 @@ POST /api-v1/readers/
 				"application/json"
 
 				{
+          "url": <str>,
 					"id": <int>,
 					"name": <str>,
 				}
@@ -307,13 +323,7 @@ GET /api-v1/readers/{readerID}/
 				readerID: <int> Required parametr
 
     responses:
-			200: OK
-				"application/json"
-
-				 {
-					"id": <int>,
-					"name": <str>,
-				 }
+			200: by analogy with POST /api-v1/books/
 
 			404: by analogy with GET /api-v1/books/{bookID}/
 
@@ -325,13 +335,7 @@ PUT /api-v1/readers/{readerID}/
     parameters: by analogy with  POST /api-v1/readers/
 
     responses:
-			200: OK
-				"application/json"
-
-				 {
-					"id": <int>,
-					"name": <str>,
-				 }
+			200: by analogy with POST /api-v1/books/
 
 			404: by analogy with GET /api-v1/books/{bookID}/
 
@@ -359,10 +363,12 @@ DELETE /api-v1/readers/{readerID}/
 					"detail": "not delete. that object is associated with others",
 					"result": [
 						{
+              "url": <str>,
 							"id": <int>,
 							"author": <str>,
 							"name": <str>,
-							"reader": <int>
+							"reader": <int>,
+              "reader_name":<str>
 					 },
 					 .......
 				}
