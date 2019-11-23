@@ -35,61 +35,61 @@ OPTIONS /api-v1/books/
 
     responses:
       200: OK
-      {
-          "name": "Book List",
-          "description": "",
-          "renders": [
-              "application/json",
-              "text/html"
-          ],
-          "parses": [
-              "application/json",
-              "application/x-www-form-urlencoded",
-              "multipart/form-data"
-          ],
-          "actions": {
-              "POST": {
-                  "url": {
-                      "type": "field",
-                      "required": false,
-                      "read_only": true,
-                      "label": "Url"
-                  },
-                  "id": {
-                      "type": "integer",
-                      "required": false,
-                      "read_only": true,
-                      "label": "ID"
-                  },
-                  "author": {
-                      "type": "string",
-                      "required": true,
-                      "read_only": false,
-                      "label": "Author",
-                      "max_length": 100
-                  },
-                  "name": {
-                      "type": "string",
-                      "required": true,
-                      "read_only": false,
-                      "label": "Name",
-                      "max_length": 200
-                  },
-                  "reader": {
-                      "type": "field",
-                      "required": false,
-                      "read_only": false,
-                      "label": "Reader"
-                  },
-                  "reader_name": {
-                      "type": "field",
-                      "required": false,
-                      "read_only": true,
-                      "label": "Reader name"
-                  }
-              }
-          }
-        }
+				  {
+					  "name": "Book List",
+					  "description": "",
+					  "renders": [
+						  "application/json",
+						  "text/html"
+					  ],
+					  "parses": [
+						  "application/json",
+						  "application/x-www-form-urlencoded",
+						  "multipart/form-data"
+					  ],
+					  "actions": {
+						  "POST": {
+							  "url": {
+								  "type": "field",
+								  "required": false,
+								  "read_only": true,
+								  "label": "Url"
+							  },
+							  "id": {
+								  "type": "integer",
+								  "required": false,
+								  "read_only": true,
+								  "label": "ID"
+							  },
+							  "author": {
+								  "type": "string",
+								  "required": true,
+								  "read_only": false,
+								  "label": "Author",
+								  "max_length": 100
+							  },
+							  "name": {
+								  "type": "string",
+								  "required": true,
+								  "read_only": false,
+								  "label": "Name",
+								  "max_length": 200
+							  },
+							  "reader": {
+								  "type": "field",
+								  "required": false,
+								  "read_only": false,
+								  "label": "Reader"
+							  },
+							  "reader_name": {
+								  "type": "field",
+								  "required": false,
+								  "read_only": true,
+								  "label": "Reader name"
+							  }
+						  }
+					  }
+					}
 
 
 GET /api-v1/books/   [?page={pageNum}&reader={readerID}]
@@ -105,22 +105,22 @@ GET /api-v1/books/   [?page={pageNum}&reader={readerID}]
 			200: OK
 				"application/json"
 
-				{
-					"count": <int>,
-					"next": <url str>,
-					"previous": <url str>,
-					"results": [
 						{
-              "url":<str>,
-							"id": <int>,
-							"author": <str>,
-							"name": <str>,
-							"reader": <int>,
-              "reader_name":<str>
-						},
-						...
-					]
-				}
+							"count": <int>,
+							"next": <url str>,
+							"previous": <url str>,
+							"results": [
+								{
+									"url":<str>,
+									"id": <int>,
+									"author": <str>,
+									"name": <str>,
+									"reader": <int>,
+									"reader_name":<str>
+								},
+								...
+							]
+						}
 
 
 POST /api-v1/books/
@@ -137,24 +137,24 @@ POST /api-v1/books/
 			200: OK
 				"application/json"
 
-        {
-          "url":<str>,
-          "id": <int>,
-          "author": <str>,
-          "name": <str>,
-          "reader": <int>,
-          "reader_name":<str>
-        }
+					{
+					  "url":<str>,
+					  "id": <int>,
+					  "author": <str>,
+					  "name": <str>,
+					  "reader": <int>,
+					  "reader_name":<str>
+					}
 
 			400: Bad Request
 				"application/json"
 
-				{
-					<nameField>: [
-						"This field may not be blank."
-					],
-					.....
-				}
+					{
+						<nameField>: [
+							"This field may not be blank."
+						],
+						.....
+					}
 
 
 
@@ -225,44 +225,44 @@ OPTIONS /api-v1/readers/
     Returns a description of types and supported formats
 
     responses:
-      200: OK
-        "application/json"
-        {
-            "name": "Reader List",
-            "description": "",
-            "renders": [
-                "application/json",
-                "text/html"
-            ],
-            "parses": [
-                "application/json",
-                "application/x-www-form-urlencoded",
-                "multipart/form-data"
-            ],
-            "actions": {
-                "POST": {
-                    "url": {
-                        "type": "field",
-                        "required": false,
-                        "read_only": true,
-                        "label": "Url"
-                      },
-                    "id": {
-                        "type": "integer",
-                        "required": false,
-                        "read_only": true,
-                        "label": "ID"
-                    },
-                    "name": {
-                        "type": "string",
-                        "required": true,
-                        "read_only": false,
-                        "label": "Name",
-                        "max_length": 200
-                    }
-                }
-            }
-        }
+		  200: OK
+			"application/json"
+			{
+				"name": "Reader List",
+				"description": "",
+				"renders": [
+					"application/json",
+					"text/html"
+				],
+				"parses": [
+					"application/json",
+					"application/x-www-form-urlencoded",
+					"multipart/form-data"
+				],
+				"actions": {
+					"POST": {
+						"url": {
+							"type": "field",
+							"required": false,
+							"read_only": true,
+							"label": "Url"
+						  },
+						"id": {
+							"type": "integer",
+							"required": false,
+							"read_only": true,
+							"label": "ID"
+						},
+						"name": {
+							"type": "string",
+							"required": true,
+							"read_only": false,
+							"label": "Name",
+							"max_length": 200
+						}
+					}
+				}
+			}
 
 
 GET /api-v1/readers/   [?page={pageNum}]
@@ -277,19 +277,19 @@ GET /api-v1/readers/   [?page={pageNum}]
 			200: OK
 				"application/json"
 
-				{
-					"count": <int>,
-					"next": <url str>,
-					"previous": <url str>,
-					"results": [
-						{
-              "url": <str>,
-							"id": <int>,
-							"name": <str>
-						},
-						...
-					]
-				}
+					{
+						"count": <int>,
+						"next": <url str>,
+						"previous": <url str>,
+						"results": [
+							{
+								"url": <str>,
+								"id": <int>,
+								"name": <str>
+							},
+							...
+						]
+					}
 
 
 POST /api-v1/readers/
@@ -304,11 +304,11 @@ POST /api-v1/readers/
 			200: OK
 				"application/json"
 
-				{
-          "url": <str>,
-					"id": <int>,
-					"name": <str>,
-				}
+						{
+							"url": <str>,
+							"id": <int>,
+							"name": <str>,
+						}
 
 			400: by analogy with  POST /api-v1/books/
 
@@ -363,12 +363,12 @@ DELETE /api-v1/readers/{readerID}/
 					"detail": "not delete. that object is associated with others",
 					"result": [
 						{
-              "url": <str>,
+							"url": <str>,
 							"id": <int>,
 							"author": <str>,
 							"name": <str>,
 							"reader": <int>,
-              "reader_name":<str>
+							"reader_name":<str>
 					 },
 					 .......
 				}
