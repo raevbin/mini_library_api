@@ -33,7 +33,7 @@ class ReaderUpdate(generics.RetrieveUpdateDestroyAPIView):
 
     def delete(self, request, *args, **kwargs):
         booksList = Book.objects.filter(reader=kwargs.get('pk'))
-        booksListSer = BookDetail(booksList,many=True)
+        booksListSer = BookDetail(booksList,many=True,context={'request': request})
         if len(booksListSer.data):
             data = {"detail":"not delete. that object is associated with others",
                     'result': booksListSer.data}

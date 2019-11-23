@@ -168,3 +168,18 @@ def delete(self, request, *args, **kwargs):
 def delete(self, request, *args, **kwargs):
 def delete(self, request, *args, **kwargs):
 [OrderedDict([('id', 7), ('author', 'ertyyuty'), ('name', 'gfjghjgfhjgfj'), ('reader', 3)]), OrderedDict([('id', 9), ('author', 'sdfgdfghdfgh'), ('name', 'dfghfdgh dg df'), ('reader', 3)]), OrderedDict([('id', 15), ('author', 'sadfsdf'), ('name', 'fdghfdgh'), ('reader', 3)])]
+=========== booksListSer
+=========== booksListSer
+BookDetail(<QuerySet [<Book: апро-рполрпло>, <Book: sadfsdf-zx>, <Book: sadfsdf-zx>]>, many=True):
+    url = HyperlinkedIdentityField(view_name='book-detail')
+    id = IntegerField(label='ID', read_only=True)
+    author = CharField(max_length=100)
+    name = CharField(max_length=200)
+    reader = PrimaryKeyRelatedField(allow_null=True, queryset=Reader.objects.all(), required=False)
+    reader_name = SerializerMethodField()
+=========== booksListSer
+['__class__', '__deepcopy__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_args', '_context', '_creation_counter', '_kwargs', 'allow_empty', 'allow_null', 'bind', 'child', 'context', 'create', 'data', 'default', 'default_empty_html', 'default_error_messages', 'default_validators', 'error_messages', 'errors', 'fail', 'field_name', 'get_attribute', 'get_default', 'get_initial', 'get_validators', 'get_value', 'help_text', 'initial', 'instance', 'is_valid', 'label', 'many', 'many_init', 'parent', 'partial', 'read_only', 'required', 'root', 'run_validation', 'run_validators', 'save', 'source', 'style', 'to_internal_value', 'to_representation', 'update', 'validate', 'validate_empty_values', 'validated_data', 'validators', 'write_only']
+=========== booksListSer
+=========== booksListSer
+=========== booksListSer
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__module__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'serializer', 'sort']

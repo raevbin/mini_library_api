@@ -15,10 +15,17 @@ class ReaderDetail(CurrentModel):
 
     class Meta:
         model = Reader
-        fields = '__all__'
+        fields = ['url','id','name']
 
 class BookDetail(CurrentModel):
+    reader_name = serializers.SerializerMethodField()
 
     class Meta:
         model = Book
-        fields = '__all__'
+        fields = ['url','id','author','name','reader','reader_name']
+
+    def get_reader_name(self,obj):
+        if obj.reader:
+            return obj.reader.name
+        else:
+            return None
