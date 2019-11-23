@@ -4,10 +4,11 @@ services:
     build: ./pro
     restart: on-failure:20
     command:  bash -c "
-              python manage.py makemigrations
-              && python manage.py migrate
-              && python manage.py runserver 0.0.0.0:8000
-            "
+             python manage.py shell < test_connect_to_db.py
+             && python manage.py makemigrations
+             && python manage.py migrate
+             && python manage.py runserver 0.0.0.0:8000
+           "
     ports:
      - 8000:8000
     volumes:
