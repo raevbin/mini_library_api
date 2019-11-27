@@ -2,3 +2,4 @@
 db/*
 !db/.gitkeep
 *__pycache__/
+pro/django.log
