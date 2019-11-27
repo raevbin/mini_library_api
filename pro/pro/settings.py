@@ -24,8 +24,7 @@ SECRET_KEY = 'qop4cfr3dsk-06lvm-dz9k0_t11oausp$rderpov4i@s#q*5t0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-USE_BROWSER_API_RENDER = True
-VERSION_API = 1
+
 
 ALLOWED_HOSTS = ['*']
 
@@ -72,20 +71,15 @@ TEMPLATES = [
 ]
 
 
-
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer'
     ],
     # 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
 }
-
-if USE_BROWSER_API_RENDER:
-    REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'].append('rest_framework.renderers.BrowsableAPIRenderer')
-
-
 
 
 WSGI_APPLICATION = 'pro.wsgi.application'
@@ -145,11 +139,11 @@ LOGGING = {
             'class': 'django.utils.log.AdminEmailHandler'
         },
         'applogfile': {
-        'level':'DEBUG',
-        'class':'logging.handlers.RotatingFileHandler',
-        'filename': os.path.join(BASE_DIR, 'django.log'),
-        'maxBytes': 1024*1024*15, # 15MB
-        'backupCount': 10,
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'django.log'),
+            'maxBytes': 1024*1024*15,  # 15MB
+            'backupCount': 10,
         }
 
     },
@@ -160,7 +154,7 @@ LOGGING = {
             'propagate': True,
         },
         'log': {
-            'handlers': ['applogfile',],
+            'handlers': ['applogfile'],
             'level': 'DEBUG',
         },
     }
