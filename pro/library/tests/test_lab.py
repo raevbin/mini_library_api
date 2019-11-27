@@ -1,9 +1,30 @@
 import json
 import urllib
+import csv
+from io import StringIO
 
+import factory
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
+
+from library.models import Reader, Book
+
+
+class ReaderFactory(factory.django.DjangoModelFactory):
+    class Meta:
+        model = Reader
+
+    name = factory.Sequence(lambda n: 'name-%04d' % n)
+
+
+class BookFactory(factory.django.DjangoModelFactory):
+    class Meta:
+        model = Book
+
+    author = factory.Faker('name')
+    name = factory.Faker('text')
+    reader = factory.SubFactory(ReaderFactory)
 
 
 class LibraryTests(APITestCase):
@@ -130,3 +151,17 @@ class LibraryTests(APITestCase):
 
         self.client.delete(data_book.get('url'))
         self.client.delete(data_reader.get('url'))
+
+    def test_export_to_csv(self):
+        csv.register_dialect('custom', delimiter=';')
+        count = 100
+        for _ in range(count):
+            book = BookFactory()
+
+        url = '/api-v1/books/export.csv'
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        str_obj = StringIO(response.content.decode('utf8'))
+        csv_reader = csv.reader(str_obj)
+        row_count = sum(1 for row in csv_reader)
+        self.assertEqual((row_count >= count), True)
