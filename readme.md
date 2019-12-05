@@ -6,22 +6,11 @@ This project is implemented as an API using the Django Rest Framework.
 
 ## SETTINGS
 in the file pro/pro/settings.py
-default
-   DEBUG = False
-   USE_BROWSER_API_RENDER = True
-   VERSION_API = 1
-
-You can set VERSION_API = 2
-Then, instead of id, the url of the object is used. This version is not fully debugged and some functions may not work.
 
 
 ## Installation
 > docker-compose build
 > docker-compose up
-
-
-*Attention. When the WEB starts for the first time, the container will throw the error django.db.utils.OperationalError: (2002, "Can't connect to MySQL server on 'db' (115)"). This is normal.
-This is because the DB has not yet managed to go through the initial initialization. After several automatic reboots (up to 20), the service should start normally.*
 
 After a successful launch, the service is available at http://localhost:8000/api-v1/
 
